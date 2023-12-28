@@ -1,0 +1,15 @@
+package com.model;
+
+public class Vehicle {
+    private int regId;
+    private String modelName;
+    private float price;
+    private String colour;
+    private String area;
+    private String ownerName;
+    private long mob;
+    private long adhar;
+
+    // Getters and Setters for all fields
+    // (Not shown here to avoid redundancy)
+}
