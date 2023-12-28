@@ -1,0 +1,9 @@
+package com.service;
+
+public interface Rto {
+    String COUNTRY = "India"; // Constant for country
+
+    void registerVehicle();
+    void viewDetails();
+    void updateVehicle();
+}
