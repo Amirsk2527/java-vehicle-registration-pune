@@ -1,0 +1,76 @@
+package com.service;
+
+import com.model.Vehicle;
+import java.util.Scanner;
+
+public class Pune implements Rto {
+    private final Vehicle vehicle = new Vehicle();
+    private final Scanner scanner = new Scanner(System.in);
+
+    @Override
+    public void registerVehicle() {
+        System.out.println("Enter registration ID: ");
+        vehicle.setRegId(scanner.nextInt());
+
+        System.out.println("Enter model name: ");
+        vehicle.setModelName(scanner.next());
+
+        System.out.println("Enter price: ");
+        vehicle.setPrice(scanner.nextFloat());
+
+        System.out.println("Enter colour: ");
+        vehicle.setColour(scanner.next());
+
+        System.out.println("Enter area: ");
+        vehicle.setArea(scanner.next());
+
+        System.out.println("Enter owner name: ");
+        vehicle.setOwnerName(scanner.next());
+
+        System.out.println("Enter mobile number: ");
+        vehicle.setMob(scanner.nextLong());
+
+        System.out.println("Enter Aadhar number: ");
+        vehicle.setAdhar(scanner.nextLong());
+
+        System.out.println("Vehicle registered successfully.");
+    }
+
+    @Override
+    public void viewDetails() {
+        System.out.println("Vehicle Details:");
+        System.out.println("Registration ID: " + vehicle.getRegId());
+        System.out.println("Model Name: " + vehicle.getModelName());
+        System.out.println("Price: " + vehicle.getPrice());
+        System.out.println("Colour: " + vehicle.getColour());
+        System.out.println("Area: " + vehicle.getArea());
+        System.out.println("Owner Name: " + vehicle.getOwnerName());
+        System.out.println("Mobile Number: " + vehicle.getMob());
+        System.out.println("Aadhar Number: " + vehicle.getAdhar());
+    }
+
+    @Override
+    public void updateVehicle() {
+        System.out.println("Choose an option:");
+        System.out.println("1. Update Price");
+        System.out.println("2. Update Owner Name");
+        
+        int choice = scanner.nextInt();
+        
+        switch (choice) {
+            case 1:
+                System.out.println("Enter new price: ");
+                vehicle.setPrice(scanner.nextFloat());
+                System.out.println("Price updated successfully.");
+                break;
+            case 2:
+                System.out.println("Enter new owner name: ");
+                vehicle.setOwnerName(scanner.next());
+                System.out.println("Owner name updated successfully.");
+                break;
+            default:
+                System.out.println("Invalid option.");
+                break;
+        }
+    }
+}
